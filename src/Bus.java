@@ -133,9 +133,10 @@ public class Bus {
 
 
     public int[] getEmptySeats(){
-        int[] emptySeats = new int[busCapacity];
+        int[] emptySeats = new int[busCapacity-numberOfPassengers];
         int emptySeatCount =0;
-        for (int seat=0; seat < busCapacity; seat++){
+        System.out.println(numberOfPassengers);
+        for (int seat=0; seat < (busCapacity-numberOfPassengers); seat++){
             if (this.passengers[seat] == null){
                 emptySeats[emptySeatCount]=seat;
                 emptySeatCount++;
